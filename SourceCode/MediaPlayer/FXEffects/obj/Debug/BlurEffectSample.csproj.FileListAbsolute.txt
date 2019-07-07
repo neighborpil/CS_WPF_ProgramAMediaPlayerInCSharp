@@ -1,0 +1,12 @@
+C:\Huw\programming\PCPro\cSharp\MediaPlayer4\BlurEffectSample\bin\Debug\BlurEffectSample.exe
+C:\Huw\programming\PCPro\cSharp\MediaPlayer4\BlurEffectSample\bin\Debug\BlurEffectSample.pdb
+C:\Huw\programming\PCPro\cSharp\MediaPlayer4\BlurEffectSample\obj\Debug\ResolveAssemblyReference.cache
+C:\Huw\programming\PCPro\cSharp\MediaPlayer4\BlurEffectSample\obj\Debug\Window1.baml
+C:\Huw\programming\PCPro\cSharp\MediaPlayer4\BlurEffectSample\obj\Debug\Window1.g.cs
+C:\Huw\programming\PCPro\cSharp\MediaPlayer4\BlurEffectSample\obj\Debug\App.g.cs
+C:\Huw\programming\PCPro\cSharp\MediaPlayer4\BlurEffectSample\obj\Debug\BlurEffectSample_MarkupCompile.cache
+C:\Huw\programming\PCPro\cSharp\MediaPlayer4\BlurEffectSample\obj\Debug\BlurEffectSample.g.resources
+C:\Huw\programming\PCPro\cSharp\MediaPlayer4\BlurEffectSample\obj\Debug\BlurEffectSample.Properties.Resources.resources
+C:\Huw\programming\PCPro\cSharp\MediaPlayer4\BlurEffectSample\obj\Debug\BlurEffectSample.csproj.GenerateResource.Cache
+C:\Huw\programming\PCPro\cSharp\MediaPlayer4\BlurEffectSample\obj\Debug\BlurEffectSample.exe
+C:\Huw\programming\PCPro\cSharp\MediaPlayer4\BlurEffectSample\obj\Debug\BlurEffectSample.pdb

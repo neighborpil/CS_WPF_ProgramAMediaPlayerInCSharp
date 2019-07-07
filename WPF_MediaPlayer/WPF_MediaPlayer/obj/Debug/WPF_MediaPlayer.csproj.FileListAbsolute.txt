@@ -1,0 +1,18 @@
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\bin\Debug\WPF_MediaPlayer.exe.config
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\bin\Debug\WPF_MediaPlayer.exe
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\bin\Debug\WPF_MediaPlayer.pdb
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\obj\Debug\WPF_MediaPlayer.csprojAssemblyReference.cache
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\obj\Debug\MainWindow.g.cs
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\obj\Debug\App.g.cs
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\obj\Debug\WPF_MediaPlayer_Content.g.cs
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\obj\Debug\WPF_MediaPlayer_MarkupCompile.cache
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\obj\Debug\WPF_MediaPlayer_MarkupCompile.lref
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\obj\Debug\MainWindow.baml
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\obj\Debug\WPF_MediaPlayer.g.resources
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\obj\Debug\WPF_MediaPlayer.Properties.Resources.resources
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\obj\Debug\WPF_MediaPlayer.csproj.GenerateResource.cache
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\obj\Debug\WPF_MediaPlayer.csproj.CoreCompileInputs.cache
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\obj\Debug\WPF_MediaPlayer.exe
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\obj\Debug\WPF_MediaPlayer.pdb
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\bin\Debug\Source\01. Hello Dolly.mp3
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\WPF_MediaPlayer\bin\Debug\Source\cat2.wmv

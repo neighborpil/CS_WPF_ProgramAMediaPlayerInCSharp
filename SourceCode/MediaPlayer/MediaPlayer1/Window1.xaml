@@ -1,0 +1,19 @@
+﻿<Window x:Class="Player2.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Player2" Height="451" Width="592" WindowStyle="ThreeDBorderWindow">
+    <Grid Background="GhostWhite">
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,93,12" Name="StopBtn" VerticalAlignment="Bottom" Width="75" Click="StopBtn_Click">Stop</Button>
+        <Button Height="23" Margin="0,0,12,12" Name="PauseBtn" VerticalAlignment="Bottom" Click="PauseBtn_Click" HorizontalAlignment="Right" Width="75">Pause</Button>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,174,12" Name="StartBtn" VerticalAlignment="Bottom" Width="74" Click="StartBtn_Click">Start</Button>
+        <MediaElement Margin="12,12,59,144" Name="Me" Source="..\..\..\media\testvideo.wmv" LoadedBehavior="Manual" MediaOpened="Me_MediaOpened" MediaEnded="Me_MediaEnded" />
+        <Slider HorizontalAlignment="Right" Margin="0,40,12,144" Name="VolumeSlider" Width="22" Orientation="Vertical" ValueChanged="VolSlider_ValueChanged" Maximum="1" Value="0.5" TickPlacement="None" TickFrequency="1" />
+        <Slider Height="22" Margin="103,0,59,116" Name="PosSlider" VerticalAlignment="Bottom" ValueChanged="PosSlider_ValueChanged" PreviewMouseDown="PosSlider_PreviewMouseDown" PreviewMouseUp="PosSlider_PreviewMouseUp" TickFrequency="0" TickPlacement="BottomRight" SmallChange="0.1" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="8,0,0,110" Name="label1" VerticalAlignment="Bottom" Width="81">Position:</Label>
+        <Label Height="28" HorizontalAlignment="Right" Margin="0,6,0,0" Name="label2" VerticalAlignment="Top" Width="38">Vol</Label>
+        <Slider Height="22" Margin="103,0,59,88" Name="SpeedSlider" VerticalAlignment="Bottom" ValueChanged="SpeedSlider_ValueChanged" TickPlacement="TopLeft" Value="1" BorderBrush="Aquamarine" PreviewMouseDown="SpeedSlider_PreviewMouseDown" PreviewMouseUp="SpeedSlider_PreviewMouseUp" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="8,0,0,84" Name="label3" VerticalAlignment="Bottom" Width="77">Speed:</Label>
+        <Slider Height="22" Margin="103,0,59,60" Name="BalanceSlider" VerticalAlignment="Bottom" Maximum="1" Minimum="-1" ValueChanged="BalanceSlider_ValueChanged" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="8,0,0,60" Name="label4" VerticalAlignment="Bottom" Width="77">Balance:</Label>
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\Player\bin\Debug\Player2.exe
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\Player\bin\Debug\Player2.pdb
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\Player\obj\Debug\ResolveAssemblyReference.cache
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\Player\obj\Debug\Window1.baml
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\Player\obj\Debug\Window1.g.cs
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\Player\obj\Debug\App.g.cs
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\Player\obj\Debug\Player2_MarkupCompile.cache
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\Player\obj\Debug\Player2.g.resources
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\Player\obj\Debug\Player2.Properties.Resources.resources
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\Player\obj\Debug\Player.csproj.GenerateResource.Cache
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\Player\obj\Debug\Player2.exe
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\Player\obj\Debug\Player2.pdb

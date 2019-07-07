@@ -1,0 +1,30 @@
+E:\Test\MPTest\MPTest\MPTest\bin\Debug\MPTest.exe.config
+E:\Test\MPTest\MPTest\MPTest\bin\Debug\MPTest.exe
+E:\Test\MPTest\MPTest\MPTest\bin\Debug\MPTest.pdb
+E:\Test\MPTest\MPTest\MPTest\obj\Debug\MPTest.csprojResolveAssemblyReference.cache
+E:\Test\MPTest\MPTest\MPTest\obj\Debug\MainWindow.g.cs
+E:\Test\MPTest\MPTest\MPTest\obj\Debug\App.g.cs
+E:\Test\MPTest\MPTest\MPTest\obj\Debug\MPTest_MarkupCompile.cache
+E:\Test\MPTest\MPTest\MPTest\obj\Debug\MPTest_MarkupCompile.lref
+E:\Test\MPTest\MPTest\MPTest\obj\Debug\MainWindow.baml
+E:\Test\MPTest\MPTest\MPTest\obj\Debug\MPTest.g.resources
+E:\Test\MPTest\MPTest\MPTest\obj\Debug\MPTest.Properties.Resources.resources
+E:\Test\MPTest\MPTest\MPTest\obj\Debug\MPTest.csproj.GenerateResource.cache
+E:\Test\MPTest\MPTest\MPTest\obj\Debug\MPTest.csproj.CoreCompileInputs.cache
+E:\Test\MPTest\MPTest\MPTest\obj\Debug\MPTest.exe
+E:\Test\MPTest\MPTest\MPTest\obj\Debug\MPTest.pdb
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MPTest\MPTest\bin\Debug\MPTest.exe.config
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MPTest\MPTest\bin\Debug\MPTest.exe
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MPTest\MPTest\bin\Debug\MPTest.pdb
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MPTest\MPTest\obj\Debug\MPTest.csprojResolveAssemblyReference.cache
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MPTest\MPTest\obj\Debug\MainWindow.g.cs
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MPTest\MPTest\obj\Debug\App.g.cs
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MPTest\MPTest\obj\Debug\MPTest_MarkupCompile.cache
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MPTest\MPTest\obj\Debug\MPTest_MarkupCompile.lref
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MPTest\MPTest\obj\Debug\MainWindow.baml
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MPTest\MPTest\obj\Debug\MPTest.g.resources
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MPTest\MPTest\obj\Debug\MPTest.Properties.Resources.resources
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MPTest\MPTest\obj\Debug\MPTest.csproj.GenerateResource.cache
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MPTest\MPTest\obj\Debug\MPTest.csproj.CoreCompileInputs.cache
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MPTest\MPTest\obj\Debug\MPTest.exe
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MPTest\MPTest\obj\Debug\MPTest.pdb

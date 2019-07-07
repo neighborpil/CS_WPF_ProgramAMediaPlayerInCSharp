@@ -1,0 +1,103 @@
+﻿<Window x:Class="Player2.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="SnazzyPlayer" Height="662" Width="649.24" WindowStyle="SingleBorderWindow"
+        Drop="Files_Drop" AllowDrop="True" BorderThickness="1" Foreground="YellowGreen" Name="mainwindow" MinWidth="500" MinHeight="500">
+
+    <Window.Style>
+        <Style TargetType="Window">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="White" Offset="0"></GradientStop>
+                        <GradientStop Color="White" Offset="0.6"></GradientStop>
+                        <GradientStop Color="WhiteSmoke" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Style>
+
+
+
+    <Window.Resources>
+
+        <Style x:Key="FancyButton" TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="WhiteSmoke"></GradientStop>
+                        <GradientStop Color="LightGray" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <SolidColorBrush Color="Black">
+                    </SolidColorBrush>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="BitmapEffect">
+                        <Setter.Value>
+                            <OuterGlowBitmapEffect GlowColor="LightSteelBlue" GlowSize="3" />
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Foreground">
+                        <Setter.Value>
+                            <SolidColorBrush Color="Black">
+                            </SolidColorBrush>
+                        </Setter.Value>
+                    </Setter>
+
+                </Trigger>
+            </Style.Triggers>
+
+
+        </Style>
+
+
+
+
+
+    </Window.Resources>
+
+    <Grid >
+
+        <Grid >
+            <Menu Height="25" VerticalAlignment="Top" >
+                <MenuItem Header="_File" >
+                    <MenuItem Header="_Open File..." Click="OpenFile_Click" />
+                    <MenuItem Header="Open _Folder..." Click="OpenFolder_Click" />
+                    <MenuItem Header="Open _Playlist..." Click="OpenPlaylist_Click" />
+                    <MenuItem Header="_Save Playlist..." Click="SavePlaylist_Click" />
+                    <MenuItem Header="_Controls" Click="ShowControlPanel_Click"  />
+                    <MenuItem Header="Media _Information" Click="MediaInformation_Click" />
+                    <Separator ></Separator>
+                    <MenuItem Header="_Exit" Click="CloseApp_Click" />
+                </MenuItem>
+            </Menu>
+            <Button Style="{StaticResource FancyButton}" Height="24" HorizontalAlignment="Right" Margin="0,0,12.96,25.144" Name="StopBtn" VerticalAlignment="Bottom" Width="75" Click="StopBtn_Click" BorderThickness="1" Focusable="False">Stop
+            </Button>
+            <Button Style="{StaticResource FancyButton}" Height="24" Margin="0,0,93.96,25.144" Name="PauseBtn" VerticalAlignment="Bottom" Click="PauseBtn_Click" HorizontalAlignment="Right" Width="75" BorderThickness="1" Focusable="False">Pause</Button>
+            <Button Style="{StaticResource FancyButton}" Height="23" Margin="0,0,174.96,25.144" Name="StartBtn" VerticalAlignment="Bottom" Click="StartBtn_Click" BorderThickness="1" Focusable="False" Width="75" HorizontalAlignment="Right">Start</Button>
+            <MediaElement x:FieldModifier="public" Margin="12,46,10,142.415" Name="media" LoadedBehavior="Manual" MediaOpened="Media_MediaOpened" MediaEnded="Media_MediaEnded" MediaFailed="Media_MediaFailed" />
+            <Slider VerticalAlignment="Bottom" Margin="77.625,0,10,74.95" Name="volSlider" ValueChanged="VolSlider_ValueChanged" Maximum="1" Value="0.5" TickPlacement="None" TickFrequency="1" Height="22" />
+            <Slider Height="22" Margin="77.625,0,10,100.96" Name="posSlider" VerticalAlignment="Bottom" ValueChanged="PosSlider_ValueChanged" PreviewMouseDown="PosSlider_PreviewMouseDown" PreviewMouseUp="PosSlider_PreviewMouseUp" TickFrequency="0" TickPlacement="BottomRight" SmallChange="0.1"  ClipToBounds="True" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="12,0,0,100.96" Name="label1" VerticalAlignment="Bottom" Width="81">Position:</Label>
+            <Label Height="28" HorizontalAlignment="Left" Margin="12,0,0,74.95" x:Name="label2" VerticalAlignment="Bottom" Width="57.52" Content="Volume:&#xD;&#xA;"/>
+            <Label Height="28" Margin="77.625,0,59,46.144" Name="trackLabel" VerticalAlignment="Bottom">No track loaded</Label>
+            <Label Height="28" HorizontalAlignment="Left" Margin="12,0,0,46.144" Name="label6" VerticalAlignment="Bottom" Width="85">Track:</Label>
+            <ListBox Margin="12,46,59,200" Name="playlistBox" Visibility="Hidden" Background="Black" BorderBrush="YellowGreen" Foreground="YellowGreen" BorderThickness="1" SelectionChanged="playlistBox_SelectionChanged" >
+                <ListBox.Effect>
+                    <DropShadowEffect Color="Lavender" BlurRadius="18" ShadowDepth="10" Opacity="0.7"/>
+                </ListBox.Effect>
+            </ListBox>
+        </Grid>
+        <ScrollBar Height="100" HorizontalAlignment="Right" Margin="0,0,-211,-35" Name="scrollBar1" VerticalAlignment="Bottom" Width="18" />
+    </Grid>
+
+</Window>

@@ -1,0 +1,25 @@
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\XMLTest\bin\Debug\XMLTest.exe
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\XMLTest\bin\Debug\XMLTest.pdb
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\XMLTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\XMLTest\obj\Debug\Window1.baml
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\XMLTest\obj\Debug\Window1.g.cs
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\XMLTest\obj\Debug\App.g.cs
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\XMLTest\obj\Debug\XMLTest_MarkupCompile.cache
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\XMLTest\obj\Debug\XMLTest.g.resources
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\XMLTest\obj\Debug\XMLTest.Properties.Resources.resources
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\XMLTest\obj\Debug\XMLTest.csproj.GenerateResource.Cache
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\XMLTest\obj\Debug\XMLTest.exe
+C:\Huw\programming\PCPro\cSharp\MediaPlayer3\XMLTest\obj\Debug\XMLTest.pdb
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\OLD\MediaPlayer3\XMLTest\bin\Debug\XMLTest.exe
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\OLD\MediaPlayer3\XMLTest\bin\Debug\XMLTest.pdb
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\OLD\MediaPlayer3\XMLTest\obj\Debug\XMLTest.csprojResolveAssemblyReference.cache
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\OLD\MediaPlayer3\XMLTest\obj\Debug\Window1.baml
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\OLD\MediaPlayer3\XMLTest\obj\Debug\Window1.g.cs
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\OLD\MediaPlayer3\XMLTest\obj\Debug\App.g.cs
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\OLD\MediaPlayer3\XMLTest\obj\Debug\XMLTest_MarkupCompile.cache
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\OLD\MediaPlayer3\XMLTest\obj\Debug\XMLTest.g.resources
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\OLD\MediaPlayer3\XMLTest\obj\Debug\XMLTest.Properties.Resources.resources
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\OLD\MediaPlayer3\XMLTest\obj\Debug\XMLTest.csproj.GenerateResource.cache
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\OLD\MediaPlayer3\XMLTest\obj\Debug\XMLTest.csproj.CoreCompileInputs.cache
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\OLD\MediaPlayer3\XMLTest\obj\Debug\XMLTest.exe
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\OLD\MediaPlayer3\XMLTest\obj\Debug\XMLTest.pdb

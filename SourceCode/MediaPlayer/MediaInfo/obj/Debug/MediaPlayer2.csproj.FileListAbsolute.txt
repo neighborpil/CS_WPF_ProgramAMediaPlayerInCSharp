@@ -1,0 +1,15 @@
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MediaPlayer2\bin\Debug\Player2.exe
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MediaPlayer2\bin\Debug\Player2.pdb
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MediaPlayer2\obj\Debug\Window1.baml
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MediaPlayer2\obj\Debug\Window1.g.cs
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MediaPlayer2\obj\Debug\App.g.cs
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MediaPlayer2\obj\Debug\Player2_MarkupCompile.cache
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MediaPlayer2\obj\Debug\Player2.g.resources
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MediaPlayer2\obj\Debug\Player2.Properties.Resources.resources
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MediaPlayer2\obj\Debug\MediaPlayer2.csproj.GenerateResource.cache
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MediaPlayer2\obj\Debug\MediaPlayer2.csproj.CoreCompileInputs.cache
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MediaPlayer2\obj\Debug\Player2.exe
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MediaPlayer2\obj\Debug\Player2.pdb
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MediaPlayer2\bin\Debug\Player2.exe.CodeAnalysisLog.xml
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MediaPlayer2\bin\Debug\Player2.exe.lastcodeanalysissucceeded
+E:\BitwiseCourses\COURSES\Program a Media-Player in C#\Code\MediaPlayer\MediaPlayer2\obj\Debug\MediaPlayer2.csprojResolveAssemblyReference.cache
