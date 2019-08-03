@@ -6,23 +6,36 @@
         xmlns:local="clr-namespace:WPF_MediaPlayer"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="462.335"
+        Height="506.335"
         Width="806.667">
     <Grid>
+        <Menu Height="25"
+              VerticalAlignment="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Open File"
+                          Click="OpenFile_Click"></MenuItem>
+                <MenuItem Header="Open Folder"
+                          Click="OpenFolder_Click"></MenuItem>
+                <Separator />
+                <MenuItem Header="Exit"
+                          Click="Exit_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
         <MediaElement x:Name="MainMediaElement"
                       HorizontalAlignment="Left"
-                      Height="330"
+                      Height="301"
                       LoadedBehavior="Manual"
-                      Margin="13,9,0,0"
+                      Margin="13,38,0,0"
                       VerticalAlignment="Top"
                       Width="719"
-                      Source="Source/cat2.wmv"
+                      Source=""
                       MediaOpened="MainMediaElement_MediaOpened"
-                      MediaEnded="MainMediaElement_MediaEnded" />
+                      MediaEnded="MainMediaElement_MediaEnded"
+                      MediaFailed="MainMediaElement_MediaFailed" />
         <Button x:Name="StartButton"
                 Content="Start"
                 HorizontalAlignment="Left"
-                Margin="540,395,0,0"
+                Margin="540,444,0,0"
                 VerticalAlignment="Top"
                 Width="75"
                 RenderTransformOrigin="1.802,0.689"
@@ -30,7 +43,7 @@
         <Button x:Name="PauseButton"
                 Content="Pause"
                 HorizontalAlignment="Left"
-                Margin="624,395,0,0"
+                Margin="624,444,0,0"
                 VerticalAlignment="Top"
                 Width="75"
                 RenderTransformOrigin="1.802,0.689"
@@ -38,7 +51,7 @@
         <Button x:Name="StopButton"
                 Content="Stop"
                 HorizontalAlignment="Left"
-                Margin="708,395,0,0"
+                Margin="708,444,0,0"
                 VerticalAlignment="Top"
                 Width="75"
                 RenderTransformOrigin="1.802,0.689"
@@ -99,6 +112,20 @@
                 Maximum="1"
                 Minimum="-1"
                 ValueChanged="BalanceSlider_ValueChanged" />
+        <Label Content="Track :"
+               Height="28"
+               HorizontalAlignment="Left"
+               Margin="14,417,0,0"
+               VerticalAlignment="Top" />
+        <Label Name="TrackLabel"
+               Height="28"
+               Content="No track loaded"
+               HorizontalAlignment="Left"
+               Margin="80,417,0,0"
+               VerticalAlignment="Top"/>
+        <ListBox Name="PlayListBox"
+                 Margin="12,46,59,168"
+                 Visibility="Hidden" />
 
     </Grid>
 </Window>

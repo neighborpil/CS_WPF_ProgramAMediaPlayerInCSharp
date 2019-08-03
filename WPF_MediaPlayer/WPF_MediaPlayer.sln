@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_MediaPlayer", "WPF_MediaPlayer\WPF_MediaPlayer.csproj", "{196077AB-73CB-4346-A649-CCCFAB9207D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_MediaPlayer2", "WPF_MediaPlayer2\WPF_MediaPlayer2.csproj", "{3DB34F2F-A510-4B15-987B-0FBF1C89E749}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLTest", "XMLTest\XMLTest.csproj", "{D7C1CB6B-EAFC-44F2-A2B3-A109DD8DFF99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{196077AB-73CB-4346-A649-CCCFAB9207D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{196077AB-73CB-4346-A649-CCCFAB9207D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{196077AB-73CB-4346-A649-CCCFAB9207D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DB34F2F-A510-4B15-987B-0FBF1C89E749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB34F2F-A510-4B15-987B-0FBF1C89E749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB34F2F-A510-4B15-987B-0FBF1C89E749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB34F2F-A510-4B15-987B-0FBF1C89E749}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7C1CB6B-EAFC-44F2-A2B3-A109DD8DFF99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7C1CB6B-EAFC-44F2-A2B3-A109DD8DFF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7C1CB6B-EAFC-44F2-A2B3-A109DD8DFF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7C1CB6B-EAFC-44F2-A2B3-A109DD8DFF99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
