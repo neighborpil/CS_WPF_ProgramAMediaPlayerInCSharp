@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Xml;
 
@@ -52,9 +53,47 @@ namespace XMLTest
                     xmlWriter.WriteStartElement("CD");
                     xmlWriter.WriteElementString("Artist", data.Artist);
                     xmlWriter.WriteElementString("Album", data.Album);
+                    xmlWriter.WriteEndElement();
                 });
                 xmlWriter.WriteEndElement();
             }
+        }
+
+        private void LoadButton_Click(object sender, RoutedEventArgs e)
+        {
+            var document = new XmlDocument();
+            try
+            {
+                document.Load(Settings.CdDataFileName);
+
+                XmlNodeList xmlNodes = document.SelectNodes("CDCollection/CD");
+                foreach (XmlNode node in xmlNodes)
+                {
+                    var artist = GetNodeText(node, "Artist");
+                    var album = GetNodeText(node, "Album");
+
+                    AppendToMainRichTextBox(artist, album);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Can't load album data[{ex.Message}]");
+            }
+        }
+
+        private static string GetNodeText(XmlNode node, string name)
+        {
+            var singleNode = node.SelectSingleNode(name);
+            string innerText = "-";
+            if (singleNode != null)
+                innerText = singleNode.InnerText;
+
+            return innerText;
+        }
+
+        private void AppendToMainRichTextBox(string artist, string album)
+        {
+            MainRichTextBox.AppendText($"Artist:{artist}|Album:{album}\n");
         }
     }
 }

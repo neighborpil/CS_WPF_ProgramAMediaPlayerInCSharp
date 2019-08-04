@@ -1,0 +1,15 @@
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\XMLTest\bin\Debug\XMLTest.exe.config
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\XMLTest\bin\Debug\XMLTest.exe
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\XMLTest\bin\Debug\XMLTest.pdb
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\XMLTest\obj\Debug\XMLTest.csprojAssemblyReference.cache
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\XMLTest\obj\Debug\MainWindow.g.cs
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\XMLTest\obj\Debug\App.g.cs
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\XMLTest\obj\Debug\XMLTest_MarkupCompile.cache
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\XMLTest\obj\Debug\XMLTest_MarkupCompile.lref
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\XMLTest\obj\Debug\MainWindow.baml
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\XMLTest\obj\Debug\XMLTest.g.resources
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\XMLTest\obj\Debug\XMLTest.Properties.Resources.resources
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\XMLTest\obj\Debug\XMLTest.csproj.GenerateResource.cache
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\XMLTest\obj\Debug\XMLTest.csproj.CoreCompileInputs.cache
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\XMLTest\obj\Debug\XMLTest.exe
+C:\codes\GitRepository\CS_WPF_ProgramAMediaPlayerInCSharp\WPF_MediaPlayer\XMLTest\obj\Debug\XMLTest.pdb

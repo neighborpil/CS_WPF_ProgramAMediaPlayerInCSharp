@@ -1,8 +1,13 @@
-﻿using System;
+﻿using Shell32;
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Threading;
+using System.Xml;
+using DataFormats = System.Windows.DataFormats;
+using DragEventArgs = System.Windows.DragEventArgs;
 using MessageBox = System.Windows.MessageBox;
 using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 
@@ -165,8 +170,15 @@ namespace WPF_MediaPlayer
             {
                 AddItemToPlayList();
                 SetPlayTrack(dialog.FileName);
+                ShowTrackInfo();
                 PlayTrack();
             }
+        }
+
+        private void AddItemToPlayList()
+        {
+            PlayListBox.Items.Clear();
+            PlayListBox.Visibility = Visibility.Hidden;
         }
 
         private void SetPlayTrack(string fileName)
@@ -175,11 +187,53 @@ namespace WPF_MediaPlayer
             TrackLabel.Content = _currentTrackPath;
         }
 
-        private void AddItemToPlayList()
-        {
-            PlayListBox.Items.Clear();
-            PlayListBox.Visibility = Visibility.Hidden;
+
+        private void ShowTrackInfo()
+        { 
+            InfoTextBox.Clear();
+
+            string directoryName = Path.GetDirectoryName(_currentTrackPath);
+            string fileName = Path.GetFileName(_currentTrackPath);
+
+            GetFolderIno(directoryName, fileName);
         }
+
+        private void GetFolderIno(string directoryName, string fileName)
+        {
+            var shell = new Shell();
+            Folder folder = shell.NameSpace(directoryName);
+            FolderItem folderItem = folder.ParseName(fileName);
+
+            for (int i = 0; i < 315; i++)
+            {
+                var header = GetHeaderInfo(folder, i);
+                var data = GetDataInfo(folder, folderItem, i);
+
+                AppendToInfoBox(i, header, data);
+            }
+        }
+       
+        private static string GetHeaderInfo(Folder folder, int i)
+        {
+            var header = folder.GetDetailsOf(null, i);
+            if (string.IsNullOrWhiteSpace(header))
+                header = "[Unknown header]";
+            return header;
+        }
+       
+        private static string GetDataInfo(Folder folder, FolderItem folderItem, int i)
+        {
+            var data = folder.GetDetailsOf(folderItem, i);
+            if (string.IsNullOrWhiteSpace(data))
+                data = "[No data]";
+            return data;
+        }
+
+        private void AppendToInfoBox(int i, string header, string data)
+        {
+            InfoTextBox.AppendText($"\n{i} {header} : {data}");
+        }
+
 
         private void PlayTrack()
         {
@@ -251,7 +305,171 @@ namespace WPF_MediaPlayer
         {
             this.Close();
         }
+        #region PlayList
 
-        
+        private void OpenPlaylist_Click(object sender, RoutedEventArgs e)
+        {
+            var document = new XmlDocument();
+
+            bool isOk = true;
+
+            try
+            {
+                document.Load(Settings.CdDataFileName);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error Loading XML Data");
+                isOk = false;
+            }
+
+            if (isOk)
+            {
+                PlayListBox.Items.Clear();
+                PlayListBox.Visibility = Visibility.Visible;
+                var xmlNodes = document.SelectNodes("Playlist/Track");
+
+                foreach (XmlNode node in xmlNodes)
+                {
+                    string track = GetNodeText(node, "Path");
+                    PlayListBox.Items.Add(track);
+                }
+
+                PlayListBox.SelectedIndex = 0;
+            }
+        }
+
+        private static string GetNodeText(XmlNode node, string name)
+        {
+            var singleNode = node.SelectSingleNode(name);
+            string innerText = "-";
+            if (singleNode != null)
+                innerText = singleNode.InnerText;
+
+            return innerText;
+        }
+
+        private void SavePlayList_Click(object sender, RoutedEventArgs e)
+        {
+            List<string> albumData = GetPlayListTracks();
+
+            if (albumData.Count == 0)
+            {
+                MessageBox.Show("No tracks to save!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            WritePlayListTracks(albumData);
+        }
+
+        private static void WritePlayListTracks(List<string> albumData)
+        {
+            using (var xmlWriter = XmlWriter.Create(Settings.CdDataFileName, Settings.XmlWriterSettings))
+            {
+                xmlWriter.WriteStartElement("Playlist");
+                foreach (var path in albumData)
+                {
+                    xmlWriter.WriteStartElement("Track");
+                    xmlWriter.WriteElementString("Path", path);
+                    xmlWriter.WriteEndElement();
+                }
+
+                xmlWriter.WriteEndElement();
+            }
+        }
+
+        private List<string> GetPlayListTracks()
+        {
+            var trackPaths = new List<string>();
+
+            foreach (var path in PlayListBox.Items)
+            {
+                trackPaths.Add(path.ToString());
+            }
+
+            return trackPaths;
+        }
+
+
+        private void ShowControlPanel_OnClick(object sender, RoutedEventArgs e)
+        {
+            var controlPanelWindow = new ControlPanelWindow();
+            controlPanelWindow.SpeedChangedEvent += OnControlPanelWindowOnSpeedChangedEvent;
+            controlPanelWindow.BalanceChangedEvent += OnControlPanelWindowOnBalanceChangedEvent;
+            controlPanelWindow.CloseControlPanelEvent += (senderControl, eControl) =>
+                {
+                    (senderControl as ControlPanelWindow).SpeedChangedEvent -= OnControlPanelWindowOnSpeedChangedEvent;
+                    (senderControl as ControlPanelWindow).BalanceChangedEvent -= OnControlPanelWindowOnBalanceChangedEvent;
+                };
+            controlPanelWindow.Show();
+        }
+
+        private void OnControlPanelWindowOnBalanceChangedEvent(object senderControl, double eControl)
+        {
+            this.BalanceSlider.Value = eControl;
+        }
+
+        private void OnControlPanelWindowOnSpeedChangedEvent(object senderControl, double eControl)
+        {
+            this.SpeedSlider.Value = eControl;
+        }
+
+        #endregion
+
+
+        #region Dropping down files
+
+        private void Files_OnDrop(object sender, DragEventArgs e)
+        {
+            string[] trackPaths = e.Data.GetData(DataFormats.FileDrop) as string[];
+
+            SortTrackPaths(trackPaths);
+
+            AddTrackPathsToPlayListBox(trackPaths);
+
+            MakePlayListBoxReady();
+        }
+
+        private static void SortTrackPaths(string[] trackPaths)
+        {
+            if (trackPaths != null)
+                Array.Sort(trackPaths, StringComparer.InvariantCulture);
+        }
+
+        private void AddTrackPathsToPlayListBox(string[] trackPaths)
+        {
+            foreach (var path in trackPaths)
+                if (IsValidTrack(path, FileType.MP3))
+                    PlayListBox.Items.Add(path);
+        }
+
+        private bool IsValidTrack(string path, FileType fileType)
+        {
+            string end = "";
+            switch (fileType)
+            {
+                case FileType.MP3:
+                    end = ".mp3";
+                    break;
+                 default:
+                     return false;
+            }
+
+            return path.EndsWith(end);
+        }
+
+        private void MakePlayListBoxReady()
+        {
+            if (PlayListBox.Items.Count > 0)
+            {
+                PlayListBox.Visibility = Visibility.Visible;
+                PlayListBox.SelectedIndex = 0;
+                _currentTrackPath = PlayListBox.Items[0].ToString();
+                TrackLabel.Content = _currentTrackPath;
+            }
+        }
+
+        #endregion
+
     }
 }

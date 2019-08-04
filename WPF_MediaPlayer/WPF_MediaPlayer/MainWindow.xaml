@@ -4,21 +4,103 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_MediaPlayer"
-        mc:Ignorable="d"
         Title="MainWindow"
-        Height="506.335"
-        Width="806.667">
+        Height="575.668"
+        Width="806.667"
+        AllowDrop="True"
+        Drop="Files_OnDrop">
+    <Window.Resources>
+        <Storyboard x:Key="StartButtonTurnsRed">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)"
+                                          Storyboard.TargetName="StartButton">
+                <EasingColorKeyFrame KeyTime="0:0:0.5"
+                                     Value="#FFFD0B0B" />
+                <EasingColorKeyFrame KeyTime="0:0:1"
+                                     Value="#FF9E7575" />
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="PauseButtonTurnsRed">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)"
+                                          Storyboard.TargetName="PauseButton">
+                <EasingColorKeyFrame KeyTime="0"
+                                     Value="#FF9E7575" />
+                <EasingColorKeyFrame KeyTime="0:0:0.5"
+                                     Value="Red" />
+                <EasingColorKeyFrame KeyTime="0:0:1"
+                                     Value="#FF9E7575" />
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="StopButtonTurnsRed">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)"
+                                          Storyboard.TargetName="StopButton">
+                <EasingColorKeyFrame KeyTime="0:0:0.5"
+                                     Value="Red" />
+                <EasingColorKeyFrame KeyTime="0:0:1"
+                                     Value="#FF9E7575" />
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="PauseButtonTurningRed">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)"
+                                          Storyboard.TargetName="PauseButton">
+                <EasingColorKeyFrame KeyTime="0:0:0.5"
+                                     Value="Red" />
+                <EasingColorKeyFrame KeyTime="0:0:1"
+                                     Value="#FF9E7575" />
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click"
+                      SourceName="PauseButton">
+            <BeginStoryboard x:Name="PauseButtonTurningRed_BeginStoryboard"
+                             Storyboard="{StaticResource PauseButtonTurningRed}" />
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click"
+                      SourceName="StopButton">
+            <BeginStoryboard x:Name="StopButtonTurnsRed_BeginStoryboard"
+                             Storyboard="{StaticResource StopButtonTurnsRed}" />
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click"
+                      SourceName="StartButton">
+            <BeginStoryboard x:Name="StartButtonTurnsRed_BeginStoryboard"
+                             Storyboard="{StaticResource StartButtonTurnsRed}" />
+        </EventTrigger>
+    </Window.Triggers>
     <Grid>
+        <Grid.Effect>
+            <DropShadowEffect Color="#FFFFFDFD"
+                              BlurRadius="3"
+                              ShadowDepth="1" />
+        </Grid.Effect>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1"
+                                 StartPoint="0.5,0">
+                <GradientStop Color="Black"
+                              Offset="0" />
+                <GradientStop Color="#FF1B1B1B"
+                              Offset="1" />
+                <GradientStop Color="#FFA4A4A4"
+                              Offset="0.502" />
+            </LinearGradientBrush>
+        </Grid.Background>
         <Menu Height="25"
               VerticalAlignment="Top">
             <MenuItem Header="File">
                 <MenuItem Header="Open File"
-                          Click="OpenFile_Click"></MenuItem>
+                          Click="OpenFile_Click" />
                 <MenuItem Header="Open Folder"
-                          Click="OpenFolder_Click"></MenuItem>
+                          Click="OpenFolder_Click" />
+                <MenuItem Header="Control"
+                          Click="ShowControlPanel_OnClick"/>
                 <Separator />
                 <MenuItem Header="Exit"
-                          Click="Exit_Click"></MenuItem>
+                          Click="Exit_Click" />
+            </MenuItem>
+            <MenuItem Header="Album">
+                <MenuItem Header="Open PlayList"
+                          Click="OpenPlaylist_Click" />
+                <MenuItem Header="Save PlayList"
+                          Click="SavePlayList_Click" />
             </MenuItem>
         </Menu>
         <MediaElement x:Name="MainMediaElement"
@@ -39,15 +121,28 @@
                 VerticalAlignment="Top"
                 Width="75"
                 RenderTransformOrigin="1.802,0.689"
-                Click="StartButton_Click" />
-        <Button x:Name="PauseButton"
-                Content="Pause"
+                Click="StartButton_Click"
+                Background="#FF9E7575" />
+        <Border BorderBrush="Black"
+                Name="ButtonBorder"
                 HorizontalAlignment="Left"
                 Margin="624,444,0,0"
                 VerticalAlignment="Top"
                 Width="75"
-                RenderTransformOrigin="1.802,0.689"
-                Click="PauseButton_Click" />
+                Height="20"
+                Background="#FF9E7575"
+                CornerRadius="10">
+            <!-- todo: make a custom button to stop default hover event later on -->
+            <Button x:Name="PauseButton"
+                    Content="Pause"
+                    Width="{Binding ButtonBorder.Width}"
+                    Height="{Binding ButtonBorder.Height}"
+                    RenderTransformOrigin="1.802,0.689"
+                    Click="PauseButton_Click"
+                    BorderThickness="0"
+                    Background="Transparent"
+                    Focusable="False" />
+        </Border>
         <Button x:Name="StopButton"
                 Content="Stop"
                 HorizontalAlignment="Left"
@@ -55,7 +150,8 @@
                 VerticalAlignment="Top"
                 Width="75"
                 RenderTransformOrigin="1.802,0.689"
-                Click="StopButton_Click" />
+                Click="StopButton_Click"
+                Background="#FF9E7575" />
         <Slider x:Name="VolumeSlider"
                 HorizontalAlignment="Left"
                 Margin="751,30,0,0"
@@ -75,7 +171,14 @@
                    Margin="14,349,0,0"
                    TextWrapping="Wrap"
                    Text="Position"
-                   VerticalAlignment="Top" />
+                   VerticalAlignment="Top"
+                   Foreground="White">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="#FFDE2C2C"
+                                  BlurRadius="3"
+                                  ShadowDepth="1" />
+            </TextBlock.Effect>
+        </TextBlock>
         <Slider x:Name="PositionSlider"
                 HorizontalAlignment="Left"
                 Margin="76,348,0,0"
@@ -91,7 +194,14 @@
                    Margin="14,378,0,0"
                    TextWrapping="Wrap"
                    Text="Speed"
-                   VerticalAlignment="Top" />
+                   VerticalAlignment="Top"
+                   Foreground="White">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="#FFDE2C2C"
+                                  BlurRadius="3"
+                                  ShadowDepth="1" />
+            </TextBlock.Effect>
+        </TextBlock>
         <Slider x:Name="SpeedSlider"
                 HorizontalAlignment="Left"
                 Margin="76,377,0,0"
@@ -103,7 +213,14 @@
                    Margin="14,398,0,0"
                    TextWrapping="Wrap"
                    Text="Balance"
-                   VerticalAlignment="Top" />
+                   VerticalAlignment="Top"
+                   Foreground="White">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="#FFDE2C2C"
+                                  BlurRadius="3"
+                                  ShadowDepth="1" />
+            </TextBlock.Effect>
+        </TextBlock>
         <Slider x:Name="BalanceSlider"
                 HorizontalAlignment="Left"
                 Margin="76,398,0,0"
@@ -116,16 +233,63 @@
                Height="28"
                HorizontalAlignment="Left"
                Margin="14,417,0,0"
-               VerticalAlignment="Top" />
+               VerticalAlignment="Top"
+               Foreground="White">
+            <Label.Effect>
+                <DropShadowEffect Color="#FFDE2C2C"
+                                  BlurRadius="3"
+                                  ShadowDepth="1" />
+            </Label.Effect>
+        </Label>
         <Label Name="TrackLabel"
                Height="28"
                Content="No track loaded"
                HorizontalAlignment="Left"
                Margin="80,417,0,0"
-               VerticalAlignment="Top"/>
+               VerticalAlignment="Top"
+               Foreground="White">
+            <Label.Effect>
+                <DropShadowEffect Color="#FFDE2C2C"
+                                  BlurRadius="3"
+                                  ShadowDepth="1" />
+            </Label.Effect>
+        </Label>
         <ListBox Name="PlayListBox"
                  Margin="12,46,59,168"
                  Visibility="Hidden" />
+        <Label Content="Track Information :"
+               Height="28"
+               HorizontalAlignment="Left"
+               Margin="12,442,0,0"
+               VerticalAlignment="Top"
+               Foreground="White">
+            <Label.Effect>
+                <DropShadowEffect Color="#FFDE2C2C"
+                                  BlurRadius="3"
+                                  ShadowDepth="1" />
+            </Label.Effect>
+        </Label>
+        <TextBox Name="InfoTextBox"
+                 HorizontalAlignment="Left"
+                 Height="65"
+                 Margin="16,463,0,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                 RenderTransformOrigin="0.5,0.5"
+                 Width="512">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform AngleX="-0.948"
+                                   AngleY="-0.297" />
+                    <RotateTransform />
+                    <TranslateTransform X="-3.29"
+                                        Y="-0.647" />
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
 
     </Grid>
 </Window>

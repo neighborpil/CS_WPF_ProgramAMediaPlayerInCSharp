@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_MediaPlayer2", "WPF_Med
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLTest", "XMLTest\XMLTest.csproj", "{D7C1CB6B-EAFC-44F2-A2B3-A109DD8DFF99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedioInfo", "MedioInfo\MedioInfo.csproj", "{92FA5836-1A6F-47A5-A4A7-DE208B7CE23B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D7C1CB6B-EAFC-44F2-A2B3-A109DD8DFF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7C1CB6B-EAFC-44F2-A2B3-A109DD8DFF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7C1CB6B-EAFC-44F2-A2B3-A109DD8DFF99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92FA5836-1A6F-47A5-A4A7-DE208B7CE23B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92FA5836-1A6F-47A5-A4A7-DE208B7CE23B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92FA5836-1A6F-47A5-A4A7-DE208B7CE23B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92FA5836-1A6F-47A5-A4A7-DE208B7CE23B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
